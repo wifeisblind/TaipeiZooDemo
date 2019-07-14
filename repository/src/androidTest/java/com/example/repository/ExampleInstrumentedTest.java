@@ -23,4 +23,8 @@ public class ExampleInstrumentedTest {
 
         assertEquals("com.example.repository.test", appContext.getPackageName());
     }
+
+    public void testApi() {
+        Api.INSTANCE.getApiService();
+    }
 }
