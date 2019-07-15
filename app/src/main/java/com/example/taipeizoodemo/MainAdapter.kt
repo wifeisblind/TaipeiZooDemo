@@ -5,7 +5,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.bumptech.glide.Glide
 import kotlinx.android.synthetic.main.item_main.view.*
 
-class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
+class MainAdapter(val onItemClickListener: OnItemClickListener) : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
 
     private var data = emptyList<MainItem>()
 
@@ -19,6 +19,7 @@ class MainAdapter : RecyclerView.Adapter<MainAdapter.ViewHolder>() {
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         holder.bind(data[position])
+        holder.itemView.setOnClickListener { onItemClickListener.onItemClick(position) }
     }
 
     fun setData(data: List<MainItem>) {

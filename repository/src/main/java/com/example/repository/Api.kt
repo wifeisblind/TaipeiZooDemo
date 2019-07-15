@@ -10,6 +10,7 @@ object Api {
     private const val BASE_URL = "https://data.taipei/opendata/datalist/"
 
     fun getApiService(): ApiInterface {
+
         val retrofit = Retrofit.Builder()
             .baseUrl(BASE_URL)
             .addConverterFactory(GsonConverterFactory.create())
