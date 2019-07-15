@@ -54,7 +54,7 @@
             app:layout_constraintStart_toStartOf="@+id/title"
             app:layout_constraintTop_toBottomOf="@id/subtitle"
             app:layout_constraintBottom_toBottomOf="@+id/thumbnail"
-            tools:text="@string/info"/>
+            android:text="@string/no_close_info"/>
 
     <ImageView
             android:id="@+id/chevron"

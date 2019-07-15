@@ -23,7 +23,9 @@ class MainViewModel : ViewModel() {
             Log.d("MainViewModel", "onSubscribe")
 
         }.subscribe({
-            _data.value = it.result.results.map { result -> MainItem(result.E_Pic_URL, result.E_Name, result.E_Info, result.E_Memo) }
+            _data.value = it.result.results.map { result ->
+                MainItem(result.E_Pic_URL, result.E_Name, result.E_Info, result.E_Memo, result.E_URL, result.E_Category)
+            }
         },{
 
         },{
