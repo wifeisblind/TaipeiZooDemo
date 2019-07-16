@@ -12,6 +12,9 @@ class MainActivity : AppCompatActivity(), OnItemClickListener{
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
+
+        if(supportFragmentManager.fragments.size > 0)
+            return
         supportFragmentManager.beginTransaction()
             .replace(R.id.container, MainFragment())
             .commit()

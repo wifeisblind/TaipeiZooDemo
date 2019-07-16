@@ -6,55 +6,55 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent">
 
-<androidx.constraintlayout.widget.ConstraintLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        tools:context=".DetailFragment">
-
-    <ImageView
-            android:id="@+id/image"
-            android:layout_width="match_parent" android:layout_height="wrap_content"
-            app:layout_constraintTop_toTopOf="parent"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            tools:src="@drawable/formosan_animal"/>
-
-    <TextView
-            android:id="@+id/txtDetail"
+    <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_margin="16dp"
-            android:textSize="16sp"
-            app:layout_constraintTop_toBottomOf="@+id/image"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"/>
+            tools:context=".DetailFragment">
 
-    <TextView
-            android:id="@+id/txtInfo"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:layout_marginStart="16dp"
-            android:layout_marginTop="16dp"
-            android:textSize="16sp"
-            android:text="@string/no_close_info"
-            app:layout_constraintStart_toStartOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/txtDetail"/>
+        <ImageView
+                android:id="@+id/image"
+                android:layout_width="match_parent" android:layout_height="wrap_content"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                tools:src="@drawable/formosan_animal"/>
 
-    <TextView
-            android:id="@+id/txtCategory"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:textSize="16sp"
-            app:layout_constraintStart_toStartOf="@+id/txtInfo"
-            app:layout_constraintTop_toBottomOf="@+id/txtInfo"/>
+        <TextView
+                android:id="@+id/txtDetail"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="16dp"
+                android:textSize="16sp"
+                app:layout_constraintTop_toBottomOf="@+id/image"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
 
-    <TextView
-            android:id="@+id/openBrowser"
-            android:layout_width="wrap_content" android:layout_height="wrap_content"
-            android:layout_marginEnd="16dp"
-            android:textSize="14sp"
-            android:textColor="@android:color/holo_blue_light"
-            android:text="@string/open_in_broswer"
-            app:layout_constraintBottom_toBottomOf="@+id/txtCategory"
-            app:layout_constraintEnd_toEndOf="parent"/>
+        <TextView
+                android:id="@+id/txtInfo"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:textSize="16sp"
+                android:text="@string/no_close_info"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@+id/txtDetail"/>
 
-</androidx.constraintlayout.widget.ConstraintLayout>
+        <TextView
+                android:id="@+id/txtCategory"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="@+id/txtInfo"
+                app:layout_constraintTop_toBottomOf="@+id/txtInfo"/>
+
+        <TextView
+                android:id="@+id/openBrowser"
+                android:layout_width="wrap_content" android:layout_height="wrap_content"
+                android:layout_marginEnd="16dp"
+                android:textSize="14sp"
+                android:textColor="@android:color/holo_blue_light"
+                android:text="@string/open_in_broswer"
+                app:layout_constraintBottom_toBottomOf="@+id/txtCategory"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>
