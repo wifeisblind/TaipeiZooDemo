@@ -13,8 +13,6 @@ class ApiMethods {
 
     companion object {
 
-
-
         fun getTaipeiZooData(): Observable<TaipeiZooResult>{
             return Api.getApiService()
                 .fetchData()

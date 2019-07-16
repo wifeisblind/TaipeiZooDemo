@@ -18,7 +18,11 @@ class MainViewModel : ViewModel() {
 
     val data: LiveData<List<MainItem>> = _data
 
-    fun get() {
+    var hasLoaded = false
+
+    fun loadData() {
+        if(hasLoaded) return
+
         compositeDisposable.add(ApiMethods.getTaipeiZooData().doOnSubscribe {
             Log.d("MainViewModel", "onSubscribe")
 
@@ -26,6 +30,7 @@ class MainViewModel : ViewModel() {
             _data.value = it.result.results.map { result ->
                 MainItem(result.E_Pic_URL, result.E_Name, result.E_Info, result.E_Memo, result.E_URL, result.E_Category)
             }
+            hasLoaded = true
         },{
 
         },{

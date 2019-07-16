@@ -5,11 +5,11 @@ import android.os.Bundle
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import androidx.appcompat.app.AppCompatActivity
+import android.widget.LinearLayout
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
-import androidx.lifecycle.ViewModelProvider
 import androidx.lifecycle.ViewModelProviders
+import androidx.recyclerview.widget.DividerItemDecoration
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import kotlinx.android.synthetic.main.frag_main.*
@@ -52,12 +52,13 @@ class MainFragment :Fragment() {
             ViewModelProviders.of(this).get(MainViewModel::class.java)
         } ?: return
 
+        recyclerView.addItemDecoration(DividerItemDecoration(context, LinearLayout.VERTICAL))
         recyclerView.adapter = adapter
         viewModel.data.observe(this,
             Observer<List<MainItem>> {
                 adapter?.setData(it)
             })
-        viewModel.get()
+        viewModel.loadData()
     }
 
 
